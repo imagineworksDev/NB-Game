@@ -1,11 +1,11 @@
 [[headers]]
-  for = "/Build/*.js.br"
+  for = "/Build/*.js.gz"
   [headers.values]
-    Content-Encoding = "br"
+    Content-Encoding = "gzip"
     Content-Type = "application/javascript"
 
 [[headers]]
-  for = "/Build/*.wasm.br"
+  for = "/Build/*.wasm.gz"
   [headers.values]
-    Content-Encoding = "br"
+    Content-Encoding = "gzip"
     Content-Type = "application/wasm"
