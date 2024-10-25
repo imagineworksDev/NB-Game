@@ -20,7 +20,7 @@
   </style>
 </head>
 
-<body style="text-align: center;">
+<body style="text-align: center;" onclick="fsc()">
   <canvas id="unity-canvas"></canvas>
   <script src="Build/NB Game.loader.js"></script>
   <script>
@@ -34,7 +34,8 @@
 
     const canvas = document.querySelector("#unity-canvas");
 
-    canvas.addEventListener("click", () => {
+    function fsc()
+    {
       if (canvas.requestFullscreen) {
         canvas.requestFullscreen();
       } else if (canvas.webkitRequestFullscreen) { 
@@ -42,7 +43,9 @@
       } else if (canvas.msRequestFullscreen) {
         canvas.msRequestFullscreen();
       }
-    });
+    
+    }
+    
 
     createUnityInstance(canvas, {
       dataUrl: "Build/NB Game.data",
